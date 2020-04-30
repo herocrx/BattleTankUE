@@ -1,0 +1,7 @@
+{
+	"files.exclude": {
+		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/.vscode": true,
+		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/Content": true,
+		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/Intermediate": true
+	}
+}
