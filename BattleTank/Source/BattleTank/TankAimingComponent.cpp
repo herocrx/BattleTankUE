@@ -2,6 +2,7 @@
 
 
 #include "TankAimingComponent.h"
+#include "DrawDebugHelpers.h"
 
 
 // Sets default values for this component's properties
@@ -18,7 +19,13 @@ UTankAimingComponent::UTankAimingComponent()
 void UTankAimingComponent::AimAt(FVector target)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Aiming at: %s"), *target.ToString());
+	DrawDebugLine(GetWorld(), barrelMesh->GetComponentLocation(), target, FColor(0, 255,0));
 	return;
+}
+
+void UTankAimingComponent::setBarrelMesh(UStaticMeshComponent * barrel)
+{
+	barrelMesh = barrel;
 }
 
 

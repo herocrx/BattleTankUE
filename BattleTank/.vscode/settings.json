@@ -2,6 +2,8 @@
 	"files.exclude": {
 		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/.vscode": true,
 		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/Content": true,
-		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/Intermediate": true
+		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/DerivedDataCache": true,
+		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/Intermediate": true,
+		"/home/hkuc/Documents/Training/BattleTankUE/BattleTank/Saved": true
 	}
 }

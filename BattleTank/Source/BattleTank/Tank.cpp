@@ -20,6 +20,12 @@ void ATank::BeginPlay()
 	Super::BeginPlay();
 }
 
+void ATank::setBarrelMesh(UStaticMeshComponent * barrelMesh)
+{
+	tankAimingComponent->setBarrelMesh(barrelMesh);
+}
+
+
 // Called every frame
 void ATank::Tick(float DeltaTime)
 {

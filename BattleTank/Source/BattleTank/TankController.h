@@ -23,7 +23,21 @@ class BATTLETANK_API ATankController : public APlayerController
 
 private:
 
-	// Start the tank moving the barrel so that the shot will hit 
-	void AimTowardCrosshair();
+	// Return an OUT parameter, true if hit landscape
+	bool GetSightRayHitLocation(FVector& HitLocation) const;
+
+	void AimTowardsCrosshair();
+
+	UPROPERTY(EditDefaultsOnly)
+	float CrosshairXLocation = 0.5;
+
+	UPROPERTY(EditDefaultsOnly)
+	float CrosshairYLocation = 0.3333;
+
+	UPROPERTY(EditDefaultsOnly)
+	float LineTraceRange = 1000000;
+
+	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 	
 };
