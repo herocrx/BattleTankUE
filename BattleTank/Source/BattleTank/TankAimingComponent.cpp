@@ -16,7 +16,7 @@ UTankAimingComponent::UTankAimingComponent()
 }
 
 
-void UTankAimingComponent::AimAt(FVector target)
+void UTankAimingComponent::AimAt(FVector target, float LaunchSpeed)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Aiming at: %s"), *target.ToString());
 	DrawDebugLine(GetWorld(), barrelMesh->GetComponentLocation(), target, FColor(0, 255,0));

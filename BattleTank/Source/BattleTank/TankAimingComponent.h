@@ -16,7 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UTankAimingComponent();
 
-	void AimAt(FVector target);
+	void AimAt(FVector target, float LaunchSpeed);
 
 	void setBarrelMesh(UStaticMeshComponent * barrelMesh);
 

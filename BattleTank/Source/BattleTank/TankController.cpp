@@ -27,15 +27,17 @@ void ATankController::Tick(float DeltaTime)
 
 void ATankController::AimTowardsCrosshair()
 {
+    /*
 	if (!GetPawn()) { return; } // e.g. if not possessing
 	auto AimingComponent = GetPawn()->FindComponentByClass<UTankAimingComponent>();
 	if (!ensure(AimingComponent)) { return; }
+    */
 
 	FVector HitLocation; // Out parameter
 	bool bGotHitLocation = GetSightRayHitLocation(HitLocation);
 	if (bGotHitLocation) // Has "side-effect", is going to line trace
 	{
-		AimingComponent->AimAt(HitLocation);
+		GetControllerTank()->AimAt(HitLocation);
 	}
 }
 
