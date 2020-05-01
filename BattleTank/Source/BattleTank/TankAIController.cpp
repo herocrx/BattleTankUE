@@ -10,7 +10,12 @@ void ATankAIController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
-    //(LogTemp, Warning, TEXT("Executed TankAIController"));
+    tankControlled->AimAt(tankPlayer->GetActorLocation());
+}
+
+ATank * ATankAIController::GetControlledTank() const
+{
+    return Cast<ATank>(GetParentActor());
 }
 
 	
@@ -21,8 +26,14 @@ ATank * ATankAIController::GetPlayerTank() const
 
 void ATankAIController::BeginPlay()
 {
-    tankController = GetPlayerTank();
-    if(!tankController)
+    tankPlayer = GetPlayerTank();
+    if(!tankPlayer)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("TankPlayer could not be found"))
+    }
+
+    tankControlled = GetControlledTank();
+    if(!tankControlled)
     {
         UE_LOG(LogTemp, Warning, TEXT("TankController could not be found"))
     }
