@@ -18,3 +18,17 @@ ATank * ATankController::GetControllerTank() const
     }
     return tankPlayerController;
 }
+
+void ATankController::Tick(float DeltaTime)
+{
+    Super::Tick(DeltaTime);
+}
+
+void ATankController::AimTowardCrosshair()
+{
+    if(!GetControllerTank())
+    {
+        // Get World location line trace through the crosshair
+        
+    }
+}
