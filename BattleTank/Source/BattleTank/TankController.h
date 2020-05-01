@@ -19,4 +19,5 @@ class BATTLETANK_API ATankController : public APlayerController
 	
 	ATank * GetControllerTank() const;
 	
+	
 };
